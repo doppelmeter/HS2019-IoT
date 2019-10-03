@@ -64,7 +64,7 @@ while True:  # making a loop
         if current_synt < 0:
             current_synt = len(synt) - 1
         print(current_synt)
-    elif keyboard.is_pressed('space'):  # if key 'space' is pressed
+    if keyboard.is_pressed('space'):  # if key 'space' is pressed
         send = f"{ip_adress};{scale[current_tones]}{octave};{current_synt}"
         client.publish(settings.topic_sound_msg, payload=send, qos=0, retain=False)
         print("space ")

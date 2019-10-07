@@ -85,7 +85,7 @@ def check_hit(threshold):
     # y = acceleration['y']
     z = acceleration['z']
 
-    if abs(acceleration) > threshold:
+    if abs(z) > threshold:
         return True
     else:
         return False
